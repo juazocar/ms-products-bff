@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 import cl.duoc.ms_products_bff.model.dto.Product;
 
-@FeignClient(name = "ms-products-bs", url = "http://localhost:8081/")
+@FeignClient(name = "ms-products-bs", url = "http://localhost:8081")
 public interface ProductBsFeignClient {
 
     @GetMapping("/product/products")

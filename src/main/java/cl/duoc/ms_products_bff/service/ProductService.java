@@ -15,7 +15,8 @@ public class ProductService {
     ProductBsFeignClient bsFeignClient;
 
     public List<Product> getProducts() {
-        return bsFeignClient.getProducts();
+        List<Product> listaProductos = bsFeignClient.getProducts();
+        return listaProductos;
     }
 
 }
