@@ -4,6 +4,8 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestBody;
+
 import cl.duoc.ms_products_bff.config.ProductBsFeignClient;
 import cl.duoc.ms_products_bff.model.dto.Product;
 
@@ -19,4 +21,7 @@ public class ProductService {
         return listaProductos;
     }
 
+    public String addProduct(Product product){
+        return bsFeignClient.addProduct(product);
+    }
 }

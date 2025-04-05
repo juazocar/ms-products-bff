@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.RestController;
 import cl.duoc.ms_products_bff.model.dto.Product;
 import cl.duoc.ms_products_bff.service.ProductService;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 
@@ -23,5 +25,9 @@ public class ProductController {
         return productService.getProducts();
     }
     
+    @PostMapping
+    public String postMethodName(@RequestBody Product product) {        
+        return productService.addProduct(product);
+    }
     
 }
