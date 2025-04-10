@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import cl.duoc.ms_products_bff.model.dto.Product;
 import cl.duoc.ms_products_bff.service.ProductService;
+
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -15,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @RestController
 @RequestMapping("/product")
+@CrossOrigin("*")
 public class ProductController {
 
     @Autowired
